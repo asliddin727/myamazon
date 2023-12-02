@@ -21,8 +21,6 @@ $font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 
         }
         .footer__main{
             width: 100%;
-            position: absolute;
-            top: 4rem;
             padding: 8rem 11rem; 
             background-color: $black;
             left: 0;
@@ -76,21 +74,33 @@ $font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 
                 }
             }
             .line{
+                position: absolute;
+                width: 100%;
                 border: 2px solid #fff;
+                bottom: 0;
+                z-index: 100;
             }
-            .footer__bottom{
+
+        }
+        .footer__bottom{
+            position: absolute;
+            width: 100%;
+            margin: 0 auto;
+            left: 0;
+            z-index: 111;
+            background-color: $black;   
+            color: $white;
+            .footer__nav{
                 width: 60rem;
                 margin: 0 auto;
-                .footer__nav{
-                    @include flexbox-row;
-                    align-items: center;
-                    padding: 3rem 0;
-                    gap: 2rem;
-                    a{
-                        font-size: 1.2rem;
-                        font-weight: map-get($font-weights, regular);
-                        color: $white;
-                    }
+                @include flexbox-row;
+                align-items: center;
+                padding: 3rem 0;
+                gap: 2rem;
+                a{
+                    font-size: 1.2rem;
+                    font-weight: map-get($font-weights, regular);
+                    color: $white;
                 }
             }
         }
