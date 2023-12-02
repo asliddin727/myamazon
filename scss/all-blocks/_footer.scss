@@ -23,24 +23,75 @@ $font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 
             width: 100%;
             position: absolute;
             top: 4rem;
-            padding: 8rem 22rem;
+            padding: 8rem 11rem; 
             background-color: $black;
             left: 0;
             color: $white;
             .footer__list{
                 @include flexbox-row;
+                align-items: flex-start;
+                gap: 5rem;
+                margin-bottom: 5rem;
                 .footer__item{
                     @include flexbox-column;
                     align-items: flex-start;
                     h4{
-                        font-size: 1.6rem;
+                        font-size: 1.2rem;
                         font-weight: map-get($font-weights, bold);
                     }
                     a{
                         color: $white;
+                        line-height: 3.4rem ;
+                        margin-bottom: .1rem;
                     }
                 }
 
+            }
+            .block{
+                width: 60rem;
+                margin: 0 auto;
+                @include flexbox-row;
+                align-items: center;
+                margin-bottom: 3rem;
+                #language{
+                    @include flexbox-row;
+                    align-items: center;
+                    gap: 1rem;
+                    margin-left: auto;
+                    border: none;
+                    background: transparent;
+                    color: $white;
+                    font-size: 1rem;
+                    font-weight: map-get($map: $font-weights, $key: regular);
+                    border: 1px solid #fff;
+                    padding: .9rem 2rem;
+                    margin-right: 4rem;
+                }
+                .sum{
+                   @extend #language; 
+                }
+                .country{
+                    @extend #language;
+                    margin-right: 0;
+                }
+            }
+            .line{
+                border: 2px solid #fff;
+            }
+            .footer__bottom{
+                width: 60rem;
+                margin: 0 auto;
+                .footer__nav{
+                    @include flexbox-row;
+                    align-items: center;
+                    padding: 3rem 0;
+                    gap: 2rem;
+                    a{
+                        font-size: 1.2rem;
+                        font-weight: map-get($font-weights, regular);
+                        color: $white;
+                    }
+                }
             }
         }
     }
