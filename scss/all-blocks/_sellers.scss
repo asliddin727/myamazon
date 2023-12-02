@@ -1,0 +1,43 @@
+@use "sass:map";
+
+$font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 'semibold': 600, 'bold': 700, 'extrabold': 800, 'black': 900);
+
+.sellers{
+    position: relative;
+    background-color: $white;
+    padding: 2rem;
+    z-index: 2;
+    h4{
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    .left{
+        position: absolute;
+        left: 0;
+        transform: scale(.5);
+        padding: 3.9rem 1.6rem;
+        background-color: #FFFFFFBA;
+        cursor: pointer;
+    }
+    .right{
+        position: absolute;
+        right: 0;
+        transform: scale(.5);
+        padding: 3.9rem 1.6rem;
+        background-color: #FFFFFFBA;
+        cursor: pointer;
+    }
+    .sellers__list{
+        @include flexbox-row;
+        align-items: center;
+        gap: 2rem;
+        .sellers__item{
+            flex-grow: 1;
+            .sellers__link{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

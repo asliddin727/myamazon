@@ -1,0 +1,19 @@
+$orange: #F79B34;
+$white: #fff;
+$gray: #D2C8C8;
+$blue: #283D56;
+$lightblue: #0038FF;
+$red: #f00;
+$yellow: #FFC700;
+$black: #000;
+$dark-blue: #232F3E;
+
+@mixin flexbox-row{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flexbox-column{
+    display: flex;
+    flex-direction: column;
+}

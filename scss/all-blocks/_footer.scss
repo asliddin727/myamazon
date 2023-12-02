@@ -1,0 +1,47 @@
+@use "sass:map";
+
+$font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 'semibold': 600, 'bold': 700, 'extrabold': 800, 'black': 900);
+
+.footer{
+    width: 100%;
+    position: relative;
+    .container{
+        .footer__top{
+            width: 100%;
+            position: absolute;
+            left: 0;
+            background-color: $blue;
+            text-align: center;
+            padding: 1.5rem 0;
+            a{
+                font-size: 1.3rem;
+                font-weight: map-get($font-weights, bold);
+                color: $white;
+            }
+        }
+        .footer__main{
+            width: 100%;
+            position: absolute;
+            top: 4rem;
+            padding: 8rem 22rem;
+            background-color: $black;
+            left: 0;
+            color: $white;
+            .footer__list{
+                @include flexbox-row;
+                .footer__item{
+                    @include flexbox-column;
+                    align-items: flex-start;
+                    h4{
+                        font-size: 1.6rem;
+                        font-weight: map-get($font-weights, bold);
+                    }
+                    a{
+                        color: $white;
+                    }
+                }
+
+            }
+        }
+    }
+}

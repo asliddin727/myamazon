@@ -1,0 +1,25 @@
+@use "sass:map";
+
+$font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 'semibold': 600, 'bold': 700, 'extrabold': 800, 'black': 900);
+
+.menu{
+    background-color: $blue;
+    padding: 1rem 0;
+    .container{
+        .menu__list{
+            @include flexbox-row;
+            align-items: center;
+            gap: 2rem;
+            .menu__item{
+                .menu__link{
+                    font-size: 1.4rem;
+                    font-weight: map.get($font-weights, 'regular');
+                    color: $white;
+                }
+                .home{
+                    font-weight: map.get($font-weights, 'semibold');
+                }
+            }
+        }
+    }
+}
